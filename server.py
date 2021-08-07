@@ -7,7 +7,7 @@ try:
 
     port_number = 65432
 
-    server_socket.bind(("127.0.0.1", port_number))
+    server_socket.bind(("127.0.1.1", port_number))
 
     server_socket.listen()
 
@@ -29,4 +29,3 @@ except KeyboardInterrupt:
     print("Exiting \n")
     exit(0)
 
-    
