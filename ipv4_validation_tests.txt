@@ -1,0 +1,10 @@
+Test                                                    |   Scenario                    |   Expected
+IPv4 contain exactly four octets.                       |   is_valid("1.2.3.4.5")       |   True
+This is a valid IPv4                                    |   is_valid("123.45.67.89")    |   False
+Each octet must be a decimal value between 0 and 255.   |   is_valid("123.456.78.90")   |   False
+An empty string is invalid.                             |   is_valid("")                |   False
+Check for spaces.                                       |   is_valid("12.34.56 .1")     |   False
+Check for invalid characters.                           |   is_valid("12.34.56.-1")     |   False
+IPs with trailing spaces                                |   is_valid("192.168.1.1  ")   |   False
+IPs with leading spaces are invalid.                    |   is_valid("  192.168.1.1")   |   False
+This is a valid IPv4                                    |   is_valid("192.168.1.1")     |   True
