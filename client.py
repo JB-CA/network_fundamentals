@@ -12,6 +12,8 @@ try:
 
     print(f"You received this message: \n {repr(received_message)}")
 
+    client_socket.close()
+    
 except KeyboardInterrupt:
     print("Exiting \n")
     exit(0)
